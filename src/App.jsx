@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Die from "./Die";
+import Die from "./components/Die";
 import { nanoid } from "nanoid";
 import Confetti from "react-confetti";
 
 function App() {
   const [dice, setDice] = useState(allNewDice);
   const [tenzies, setTenzies] = useState(false);
+  const [totalRolls, setTotalRolls] = useState(0);
+  const [bestRolls, setBestRolls] = useState(0);
 
   useEffect(() => {
     const win = dice.every(
@@ -14,6 +16,10 @@ function App() {
     );
     if (win) {
       setTenzies(true);
+
+      if (bestRolls === 0 || bestRolls > totalRolls) {
+        setBestRolls(totalRolls);
+      }
     }
   }, [dice]);
 
@@ -48,7 +54,9 @@ function App() {
           return die.isHeld ? die : generateNewDie();
         })
       );
+      setTotalRolls((rolls) => rolls + 1);
     } else {
+      setTotalRolls(0);
       setTenzies(false);
       setDice(allNewDice());
     }
@@ -76,6 +84,20 @@ function App() {
       <button className="roll-dice" onClick={rollDice}>
         {tenzies ? "New Game" : "Roll Dice"}
       </button>
+      <div className="roll-status">
+        {totalRolls > 0 && (
+          <div className="roll-count">
+            <h3>Rolls:</h3>
+            <p>{totalRolls}</p>
+          </div>
+        )}
+        {tenzies && (
+          <div className="roll-count">
+            <h3>Best Rolls:</h3>
+            <p>{bestRolls}</p>
+          </div>
+        )}
+      </div>
     </main>
   );
 }
