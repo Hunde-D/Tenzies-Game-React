@@ -5,6 +5,9 @@ import { nanoid } from "nanoid";
 
 function App() {
   const [dice, setDice] = useState(allNewDice);
+  const [tenzies, setTenzies] = useState(false);
+
+  useEffect(() => console.log("dice state change"), [dice]);
 
   function generateNewDie() {
     return {
