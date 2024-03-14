@@ -67,6 +67,10 @@ function App() {
     return newDice;
   }
   function holdDice(id) {
+    if (totalRolls === 0) {
+      setSeconds(0); // Reset seconds on the first roll of a new game
+      setTimerActive(true);
+    }
     setDice((oldDice) =>
       oldDice.map((die) =>
         die.id === id ? { ...die, isHeld: !die.isHeld } : die
@@ -77,10 +81,6 @@ function App() {
   // setDice(newDice);
   function rollDice() {
     if (!tenzies) {
-      if (totalRolls === 0) {
-        setSeconds(0); // Reset seconds on the first roll of a new game
-        setTimerActive(true);
-      }
       setDice((oldDice) =>
         oldDice.map((die) => {
           return die.isHeld ? die : generateNewDie();
