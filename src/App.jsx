@@ -8,7 +8,12 @@ function App() {
   const [dice, setDice] = useState(allNewDice);
   const [tenzies, setTenzies] = useState(false);
   const [totalRolls, setTotalRolls] = useState(0);
-  const [bestRolls, setBestRolls] = useState(0);
+  const [bestRolls, setBestRolls] = useState(
+    parseInt(localStorage.getItem("bestRolls")) || 0
+  );
+
+  const [startTime, setStartTime] = useState(null);
+  const [gameDuration, setGameDuration] = useState(null);
 
   useEffect(() => {
     const win = dice.every(
@@ -18,6 +23,7 @@ function App() {
       setTenzies(true);
 
       if (bestRolls === 0 || bestRolls > totalRolls) {
+        localStorage.setItem("bestRolls", totalRolls.toString());
         setBestRolls(totalRolls);
       }
     }
@@ -49,6 +55,9 @@ function App() {
   // setDice(newDice);
   function rollDice() {
     if (!tenzies) {
+      if (totalRolls === 0) {
+        setStartTime(new Date());
+      }
       setDice((oldDice) =>
         oldDice.map((die) => {
           return die.isHeld ? die : generateNewDie();
