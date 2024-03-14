@@ -21,17 +21,21 @@ Ensure you have [Node.js](https://nodejs.org/en/) installed on your machine. Thi
 ### Installation
 
 1. Clone the repository:
-   sh
-   git clone https://github.com/your_username_/Tenzies.git
+   ```bash
+   git clone https://github.com/Hunde-D/Tenzies-Game-React.git
+   ```
 2. Navigate to the project directory:
-   sh
-   cd Tenzies
+   ```bash
+   cd Tenzies-Game-React
+   ```
 3. Install NPM packages:
-   sh
+   ```bash
    npm install
+   ```
 4. Start the development server:
-   sh
+   ```bash
    npm run dev
+   ```
 5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Usage
@@ -56,9 +60,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
+Hunde Desalegn - [@Hunde-D](https://github.com/Hunde-D) - hunddh2025@gmail.com
 
-Project Link: [https://github.com/your*username*/Tenzies](https://github.com/your_username_/Tenzies)
+Project Link: [https://github.com/Hunde-D/Tenzies-Game-React](https://github.com/Hunde-D/Tenzies-Game-React.git)
 
 ## Acknowledgements
 
