@@ -1,8 +1,8 @@
 main {
-  max-width: 500px;
-  height: 500px;
+  max-width: 550px;
+  height: 550px;
   background-color: #f5f5f5;
-  margin: 25px auto;
+  margin: 5px auto;
   padding: 20px;
   border-radius: 5px;
   display: flex;
@@ -10,9 +10,29 @@ main {
   justify-content: space-around;
   align-items: center;
 }
+.hero {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .title {
   font-size: 40px;
-  margin: 0;
+  font-family: "Honk", system-ui;
+  margin-right: auto;
+  margin-left: 60px;
+  align-self: center;
+}
+.title img {
+  width: 30px;
+  margin-left: 10px;
+}
+.timer {
+  width: 65px;
+  text-indent: 8px;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 8px -2px #464646;
 }
 
 .instructions {
@@ -46,7 +66,7 @@ main {
   height: 50px;
   border: none;
   border-radius: 6px;
-  background-color: #5035ff;
+  background-color: #ffa500;
   color: #ffffff;
   font-size: 1.2rem;
   font-family: "Karla", sans-serif;
@@ -66,10 +86,19 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-.roll-count {
+.stat {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   line-height: 0%;
+}
+.best-time {
+  height: 30px;
+  padding: 0 3px;
+  display: flex;
+  align-items: center;
+  background-color: #ffa500;
+  border-radius: 5px;
+  color: #ffffff;
 }

@@ -3,7 +3,7 @@
 }
 body {
   margin: 0;
-  background-color: #0b2434;
   padding: 20px;
   font-family: "Karla", sans-serif;
+  background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%);
 }
