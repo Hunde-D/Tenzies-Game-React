@@ -14,6 +14,7 @@ Tenzies is a fun, interactive dice game built with React and powered by Vite for
 
 ![Tenzies New Game Screenshot](/src/assets/newGame.png)
 ![Tenzies Active Game Screenshot](/src/assets/activeGame.png)
+![Tenzies Active Game Screenshot](/src/assets/winGame.png)
 
 This screenshot gives you a glimpse of the Tenzies game in action, showcasing the interactive dice and the game's UI.
 
