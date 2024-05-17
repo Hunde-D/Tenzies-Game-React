@@ -2,6 +2,8 @@
 
 Tenzies is a fun, interactive dice game built with React and powered by Vite for an optimized development experience. The goal is simple: roll ten dice until all dice have the same value, clicking on each die to hold it at its current value between rolls. The game tracks the number of rolls it takes to win and the time elapsed, challenging players to beat their best scores.
 
+# Demo https://tenzies-10z.netlify.app/
+
 ## Features
 
 - **Interactive Dice**: Click to hold the value of each die between rolls.
